@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		92040FE313A3AB2E00FA1323 /* ESDeviceLocationManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92040FE213A3AB2E00FA1323 /* ESDeviceLocationManager.cpp */; };
+		9218E54E13944DA500213850 /* eslocation_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 9218E54D13944DA500213850 /* eslocation_Prefix.pch */; };
+		9218E56D1395DA9D00213850 /* ESDeviceLocationManager_Cocoa.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9218E5691395DA9D00213850 /* ESDeviceLocationManager_Cocoa.mm */; };
+		9218E56E1395DA9D00213850 /* ESDeviceLocationManager.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9218E56A1395DA9D00213850 /* ESDeviceLocationManager.hpp */; };
+		9218E56F1395DA9D00213850 /* ESLocation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9218E56B1395DA9D00213850 /* ESLocation.cpp */; };
+		9218E5701395DA9D00213850 /* ESLocation.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9218E56C1395DA9D00213850 /* ESLocation.hpp */; };
+		924E4B5B13E78CC800DDF6F9 /* ESLocationTimeHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 924E4B5913E78CC800DDF6F9 /* ESLocationTimeHelper.cpp */; };
+		924E4B5C13E78CC800DDF6F9 /* ESLocationTimeHelper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 924E4B5A13E78CC800DDF6F9 /* ESLocationTimeHelper.hpp */; };
+		924EB03415EC4E770060BCA2 /* ESTimeLocEnvironment.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 924EB03215EC4E770060BCA2 /* ESTimeLocEnvironment.hpp */; };
+		924EB03515EC4E770060BCA2 /* ESTimeLocEnvironmentInl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 924EB03315EC4E770060BCA2 /* ESTimeLocEnvironmentInl.hpp */; };
+		924EB03715EC4EC90060BCA2 /* ESTimeLocEnvironment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 924EB03615EC4EC90060BCA2 /* ESTimeLocEnvironment.cpp */; };
+		92C3B275139448F300880094 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C3B274139448F300880094 /* Foundation.framework */; };
+		92EEAEFC1395E335002B48E0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EEAEFB1395E335002B48E0 /* CoreLocation.framework */; };
+		92F6F32113DD0BC600AB3E30 /* ESGeoNames.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92F6F31F13DD0BC600AB3E30 /* ESGeoNames.cpp */; };
+		92F6F32213DD0BC600AB3E30 /* ESGeoNames.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 92F6F32013DD0BC600AB3E30 /* ESGeoNames.hpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9218E5781395DBB700213850 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9218E5711395DBB600213850 /* esutil.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = esutil;
+		};
+		9218E5821395DBD100213850 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9218E57A1395DBD000213850 /* ESTime.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = ESTime;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		92040FE213A3AB2E00FA1323 /* ESDeviceLocationManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ESDeviceLocationManager.cpp; path = ../src/ESDeviceLocationManager.cpp; sourceTree = "<group>"; };
+		9218E54D13944DA500213850 /* eslocation_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eslocation_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		9218E5691395DA9D00213850 /* ESDeviceLocationManager_Cocoa.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ESDeviceLocationManager_Cocoa.mm; path = ../src/ESDeviceLocationManager_Cocoa.mm; sourceTree = "<group>"; };
+		9218E56A1395DA9D00213850 /* ESDeviceLocationManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ESDeviceLocationManager.hpp; path = ../src/ESDeviceLocationManager.hpp; sourceTree = "<group>"; };
+		9218E56B1395DA9D00213850 /* ESLocation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ESLocation.cpp; path = ../src/ESLocation.cpp; sourceTree = "<group>"; };
+		9218E56C1395DA9D00213850 /* ESLocation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ESLocation.hpp; path = ../src/ESLocation.hpp; sourceTree = "<group>"; };
+		9218E5711395DBB600213850 /* esutil.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = esutil.xcodeproj; path = ../deps/esutil/ios/esutil.xcodeproj; sourceTree = SOURCE_ROOT; };
+		9218E57A1395DBD000213850 /* ESTime.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ESTime.xcodeproj; path = ../deps/estime/ios/ESTime.xcodeproj; sourceTree = SOURCE_ROOT; };
+		924E4B2513E2406500DDF6F9 /* loc-a1.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "loc-a1.dat"; path = "../data/loc-a1.dat"; sourceTree = "<group>"; };
+		924E4B2613E2406500DDF6F9 /* loc-a1Codes.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "loc-a1Codes.dat"; path = "../data/loc-a1Codes.dat"; sourceTree = "<group>"; };
+		924E4B2713E2406500DDF6F9 /* loc-a2.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "loc-a2.dat"; path = "../data/loc-a2.dat"; sourceTree = "<group>"; };
+		924E4B2813E2406500DDF6F9 /* loc-cc.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "loc-cc.dat"; path = "../data/loc-cc.dat"; sourceTree = "<group>"; };
+		924E4B2913E2406500DDF6F9 /* loc-data.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "loc-data.dat"; path = "../data/loc-data.dat"; sourceTree = "<group>"; };
+		924E4B2A13E2406500DDF6F9 /* loc-index.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "loc-index.dat"; path = "../data/loc-index.dat"; sourceTree = "<group>"; };
+		924E4B2B13E2406500DDF6F9 /* loc-names.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "loc-names.dat"; path = "../data/loc-names.dat"; sourceTree = "<group>"; };
+		924E4B2C13E2406500DDF6F9 /* loc-region.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "loc-region.dat"; path = "../data/loc-region.dat"; sourceTree = "<group>"; };
+		924E4B2D13E2406500DDF6F9 /* loc-regiondesc.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "loc-regiondesc.dat"; path = "../data/loc-regiondesc.dat"; sourceTree = "<group>"; };
+		924E4B2E13E2406500DDF6F9 /* loc-tz.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "loc-tz.dat"; path = "../data/loc-tz.dat"; sourceTree = "<group>"; };
+		924E4B2F13E2406500DDF6F9 /* loc-tzNames.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "loc-tzNames.dat"; path = "../data/loc-tzNames.dat"; sourceTree = "<group>"; };
+		924E4B3013E2406500DDF6F9 /* loc-tzNames.sum */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "loc-tzNames.sum"; path = "../data/loc-tzNames.sum"; sourceTree = "<group>"; };
+		924E4B3113E2406500DDF6F9 /* loc-tzOffsets-3x-3961994294.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "loc-tzOffsets-3x-3961994294.dat"; path = "../data/loc-tzOffsets-3x-3961994294.dat"; sourceTree = "<group>"; };
+		924E4B3213E2406500DDF6F9 /* loc-tzOffsets-2010i-3961994294.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "loc-tzOffsets-2010i-3961994294.dat"; path = "../data/loc-tzOffsets-2010i-3961994294.dat"; sourceTree = "<group>"; };
+		924E4B3313E2406500DDF6F9 /* loc-tzOffsets-2010k-3961994294.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "loc-tzOffsets-2010k-3961994294.dat"; path = "../data/loc-tzOffsets-2010k-3961994294.dat"; sourceTree = "<group>"; };
+		924E4B3413E2406500DDF6F9 /* loc-tzOffsets-2010l-3961994294.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "loc-tzOffsets-2010l-3961994294.dat"; path = "../data/loc-tzOffsets-2010l-3961994294.dat"; sourceTree = "<group>"; };
+		924E4B3513E2406500DDF6F9 /* loc-tzOffsets-2010o-3961994294.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "loc-tzOffsets-2010o-3961994294.dat"; path = "../data/loc-tzOffsets-2010o-3961994294.dat"; sourceTree = "<group>"; };
+		924E4B5913E78CC800DDF6F9 /* ESLocationTimeHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ESLocationTimeHelper.cpp; path = ../src/ESLocationTimeHelper.cpp; sourceTree = "<group>"; };
+		924E4B5A13E78CC800DDF6F9 /* ESLocationTimeHelper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ESLocationTimeHelper.hpp; path = ../src/ESLocationTimeHelper.hpp; sourceTree = "<group>"; };
+		924E4B5D13EA3E1400DDF6F9 /* loc-ccCodes.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "loc-ccCodes.dat"; path = "../data/loc-ccCodes.dat"; sourceTree = "<group>"; };
+		924EB03215EC4E770060BCA2 /* ESTimeLocEnvironment.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ESTimeLocEnvironment.hpp; path = ../src/ESTimeLocEnvironment.hpp; sourceTree = "<group>"; };
+		924EB03315EC4E770060BCA2 /* ESTimeLocEnvironmentInl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ESTimeLocEnvironmentInl.hpp; path = ../src/ESTimeLocEnvironmentInl.hpp; sourceTree = "<group>"; };
+		924EB03615EC4EC90060BCA2 /* ESTimeLocEnvironment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ESTimeLocEnvironment.cpp; path = ../src/ESTimeLocEnvironment.cpp; sourceTree = "<group>"; };
+		92C3B271139448F300880094 /* libeslocation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libeslocation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		92C3B274139448F300880094 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		92EEAEFB1395E335002B48E0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		92F6F31F13DD0BC600AB3E30 /* ESGeoNames.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ESGeoNames.cpp; path = ../src/ESGeoNames.cpp; sourceTree = "<group>"; };
+		92F6F32013DD0BC600AB3E30 /* ESGeoNames.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ESGeoNames.hpp; path = ../src/ESGeoNames.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92C3B26E139448F300880094 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92C3B275139448F300880094 /* Foundation.framework in Frameworks */,
+				92EEAEFC1395E335002B48E0 /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9218E54C13944D8B00213850 /* Other files */ = {
+			isa = PBXGroup;
+			children = (
+				9218E54D13944DA500213850 /* eslocation_Prefix.pch */,
+			);
+			name = "Other files";
+			path = eslocation;
+			sourceTree = "<group>";
+		};
+		9218E5681395DA8700213850 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9218E56C1395DA9D00213850 /* ESLocation.hpp */,
+				9218E56B1395DA9D00213850 /* ESLocation.cpp */,
+				9218E56A1395DA9D00213850 /* ESDeviceLocationManager.hpp */,
+				92040FE213A3AB2E00FA1323 /* ESDeviceLocationManager.cpp */,
+				9218E5691395DA9D00213850 /* ESDeviceLocationManager_Cocoa.mm */,
+				92F6F32013DD0BC600AB3E30 /* ESGeoNames.hpp */,
+				92F6F31F13DD0BC600AB3E30 /* ESGeoNames.cpp */,
+				924E4B5A13E78CC800DDF6F9 /* ESLocationTimeHelper.hpp */,
+				924E4B5913E78CC800DDF6F9 /* ESLocationTimeHelper.cpp */,
+				924EB03215EC4E770060BCA2 /* ESTimeLocEnvironment.hpp */,
+				924EB03315EC4E770060BCA2 /* ESTimeLocEnvironmentInl.hpp */,
+				924EB03615EC4EC90060BCA2 /* ESTimeLocEnvironment.cpp */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		9218E5721395DBB600213850 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9218E5791395DBB700213850 /* libesutil.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9218E57B1395DBD000213850 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9218E5831395DBD100213850 /* libESTime.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		924E4B2113E2401800DDF6F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				924E4B2513E2406500DDF6F9 /* loc-a1.dat */,
+				924E4B2613E2406500DDF6F9 /* loc-a1Codes.dat */,
+				924E4B2713E2406500DDF6F9 /* loc-a2.dat */,
+				924E4B2813E2406500DDF6F9 /* loc-cc.dat */,
+				924E4B5D13EA3E1400DDF6F9 /* loc-ccCodes.dat */,
+				924E4B2913E2406500DDF6F9 /* loc-data.dat */,
+				924E4B2A13E2406500DDF6F9 /* loc-index.dat */,
+				924E4B2B13E2406500DDF6F9 /* loc-names.dat */,
+				924E4B2C13E2406500DDF6F9 /* loc-region.dat */,
+				924E4B2D13E2406500DDF6F9 /* loc-regiondesc.dat */,
+				924E4B2E13E2406500DDF6F9 /* loc-tz.dat */,
+				924E4B2F13E2406500DDF6F9 /* loc-tzNames.dat */,
+				924E4B3013E2406500DDF6F9 /* loc-tzNames.sum */,
+				924E4B3113E2406500DDF6F9 /* loc-tzOffsets-3x-3961994294.dat */,
+				924E4B3213E2406500DDF6F9 /* loc-tzOffsets-2010i-3961994294.dat */,
+				924E4B3313E2406500DDF6F9 /* loc-tzOffsets-2010k-3961994294.dat */,
+				924E4B3413E2406500DDF6F9 /* loc-tzOffsets-2010l-3961994294.dat */,
+				924E4B3513E2406500DDF6F9 /* loc-tzOffsets-2010o-3961994294.dat */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		92C3B266139448F300880094 = {
+			isa = PBXGroup;
+			children = (
+				9218E57A1395DBD000213850 /* ESTime.xcodeproj */,
+				9218E5711395DBB600213850 /* esutil.xcodeproj */,
+				9218E5681395DA8700213850 /* Classes */,
+				9218E54C13944D8B00213850 /* Other files */,
+				924E4B2113E2401800DDF6F9 /* Resources */,
+				92C3B273139448F300880094 /* Frameworks */,
+				92C3B272139448F300880094 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		92C3B272139448F300880094 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92C3B271139448F300880094 /* libeslocation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92C3B273139448F300880094 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92EEAEFB1395E335002B48E0 /* CoreLocation.framework */,
+				92C3B274139448F300880094 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		92C3B26F139448F300880094 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9218E54E13944DA500213850 /* eslocation_Prefix.pch in Headers */,
+				9218E56E1395DA9D00213850 /* ESDeviceLocationManager.hpp in Headers */,
+				9218E5701395DA9D00213850 /* ESLocation.hpp in Headers */,
+				92F6F32213DD0BC600AB3E30 /* ESGeoNames.hpp in Headers */,
+				924E4B5C13E78CC800DDF6F9 /* ESLocationTimeHelper.hpp in Headers */,
+				924EB03415EC4E770060BCA2 /* ESTimeLocEnvironment.hpp in Headers */,
+				924EB03515EC4E770060BCA2 /* ESTimeLocEnvironmentInl.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		92C3B270139448F300880094 /* eslocation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92C3B27B139448F300880094 /* Build configuration list for PBXNativeTarget "eslocation" */;
+			buildPhases = (
+				92C3B26D139448F300880094 /* Sources */,
+				92C3B26E139448F300880094 /* Frameworks */,
+				92C3B26F139448F300880094 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eslocation;
+			productName = eslocation;
+			productReference = 92C3B271139448F300880094 /* libeslocation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92C3B268139448F300880094 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 92C3B26B139448F300880094 /* Build configuration list for PBXProject "eslocation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92C3B266139448F300880094;
+			productRefGroup = 92C3B272139448F300880094 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9218E57B1395DBD000213850 /* Products */;
+					ProjectRef = 9218E57A1395DBD000213850 /* ESTime.xcodeproj */;
+				},
+				{
+					ProductGroup = 9218E5721395DBB600213850 /* Products */;
+					ProjectRef = 9218E5711395DBB600213850 /* esutil.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				92C3B270139448F300880094 /* eslocation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9218E5791395DBB700213850 /* libesutil.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libesutil.a;
+			remoteRef = 9218E5781395DBB700213850 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9218E5831395DBD100213850 /* libESTime.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libESTime.a;
+			remoteRef = 9218E5821395DBD100213850 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92C3B26D139448F300880094 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9218E56D1395DA9D00213850 /* ESDeviceLocationManager_Cocoa.mm in Sources */,
+				9218E56F1395DA9D00213850 /* ESLocation.cpp in Sources */,
+				92040FE313A3AB2E00FA1323 /* ESDeviceLocationManager.cpp in Sources */,
+				92F6F32113DD0BC600AB3E30 /* ESGeoNames.cpp in Sources */,
+				924E4B5B13E78CC800DDF6F9 /* ESLocationTimeHelper.cpp in Sources */,
+				924EB03715EC4EC90060BCA2 /* ESTimeLocEnvironment.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		92C3B279139448F300880094 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DEBUG,
+					"ES_IOS=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../deps/esutil/src,
+					../deps/estime/src,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRIPFLAGS = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92C3B27A139448F300880094 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					"ES_IOS=1",
+				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../deps/esutil/src,
+					../deps/estime/src,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRIPFLAGS = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		92C3B27C139448F300880094 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				DSTROOT = /tmp/eslocation.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = eslocation_Prefix.pch;
+				GCC_THUMB_SUPPORT = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		92C3B27D139448F300880094 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				DSTROOT = /tmp/eslocation.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = eslocation_Prefix.pch;
+				GCC_THUMB_SUPPORT = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92C3B26B139448F300880094 /* Build configuration list for PBXProject "eslocation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92C3B279139448F300880094 /* Debug */,
+				92C3B27A139448F300880094 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92C3B27B139448F300880094 /* Build configuration list for PBXNativeTarget "eslocation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92C3B27C139448F300880094 /* Debug */,
+				92C3B27D139448F300880094 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92C3B268139448F300880094 /* Project object */;
+}
