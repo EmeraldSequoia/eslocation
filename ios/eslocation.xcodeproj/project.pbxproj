@@ -25,14 +25,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9218E5781395DBB700213850 /* PBXContainerItemProxy */ = {
+		923AF9652AF8540500D448E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9218E5711395DBB600213850 /* esutil.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = esutil;
 		};
-		9218E5821395DBD100213850 /* PBXContainerItemProxy */ = {
+		923AF96B2AF8542800D448E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9218E57A1395DBD000213850 /* ESTime.xcodeproj */;
 			proxyType = 2;
@@ -48,8 +48,8 @@
 		9218E56A1395DA9D00213850 /* ESDeviceLocationManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ESDeviceLocationManager.hpp; path = ../src/ESDeviceLocationManager.hpp; sourceTree = "<group>"; };
 		9218E56B1395DA9D00213850 /* ESLocation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ESLocation.cpp; path = ../src/ESLocation.cpp; sourceTree = "<group>"; };
 		9218E56C1395DA9D00213850 /* ESLocation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ESLocation.hpp; path = ../src/ESLocation.hpp; sourceTree = "<group>"; };
-		9218E5711395DBB600213850 /* esutil.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = esutil.xcodeproj; path = ../deps/esutil/ios/esutil.xcodeproj; sourceTree = SOURCE_ROOT; };
-		9218E57A1395DBD000213850 /* ESTime.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ESTime.xcodeproj; path = ../deps/estime/ios/ESTime.xcodeproj; sourceTree = SOURCE_ROOT; };
+		9218E5711395DBB600213850 /* esutil.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = esutil.xcodeproj; path = ../../esutil/ios/esutil.xcodeproj; sourceTree = SOURCE_ROOT; };
+		9218E57A1395DBD000213850 /* ESTime.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ESTime.xcodeproj; path = ../../estime/ios/ESTime.xcodeproj; sourceTree = SOURCE_ROOT; };
 		924E4B2513E2406500DDF6F9 /* loc-a1.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "loc-a1.dat"; path = "../data/loc-a1.dat"; sourceTree = "<group>"; };
 		924E4B2613E2406500DDF6F9 /* loc-a1Codes.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "loc-a1Codes.dat"; path = "../data/loc-a1Codes.dat"; sourceTree = "<group>"; };
 		924E4B2713E2406500DDF6F9 /* loc-a2.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "loc-a2.dat"; path = "../data/loc-a2.dat"; sourceTree = "<group>"; };
@@ -121,18 +121,18 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		9218E5721395DBB600213850 /* Products */ = {
+		923AF9622AF8540500D448E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9218E5791395DBB700213850 /* libesutil.a */,
+				923AF9662AF8540500D448E4 /* libesutil.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9218E57B1395DBD000213850 /* Products */ = {
+		923AF9682AF8542800D448E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9218E5831395DBD100213850 /* libESTime.a */,
+				923AF96C2AF8542800D448E4 /* libESTime.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -250,11 +250,11 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9218E57B1395DBD000213850 /* Products */;
+					ProductGroup = 923AF9682AF8542800D448E4 /* Products */;
 					ProjectRef = 9218E57A1395DBD000213850 /* ESTime.xcodeproj */;
 				},
 				{
-					ProductGroup = 9218E5721395DBB600213850 /* Products */;
+					ProductGroup = 923AF9622AF8540500D448E4 /* Products */;
 					ProjectRef = 9218E5711395DBB600213850 /* esutil.xcodeproj */;
 				},
 			);
@@ -266,18 +266,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9218E5791395DBB700213850 /* libesutil.a */ = {
+		923AF9662AF8540500D448E4 /* libesutil.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libesutil.a;
-			remoteRef = 9218E5781395DBB700213850 /* PBXContainerItemProxy */;
+			remoteRef = 923AF9652AF8540500D448E4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9218E5831395DBD100213850 /* libESTime.a */ = {
+		923AF96C2AF8542800D448E4 /* libESTime.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libESTime.a;
-			remoteRef = 9218E5821395DBD100213850 /* PBXContainerItemProxy */;
+			remoteRef = 923AF96B2AF8542800D448E4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -342,8 +342,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					../deps/esutil/src,
-					../deps/estime/src,
+					../../esutil/src,
+					../../estime/src,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				ONLY_ACTIVE_ARCH = YES;
@@ -396,8 +396,8 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					../deps/esutil/src,
-					../deps/estime/src,
+					../../esutil/src,
+					../../estime/src,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				OTHER_LDFLAGS = "-ObjC";
