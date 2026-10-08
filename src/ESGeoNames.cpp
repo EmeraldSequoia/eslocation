@@ -527,6 +527,87 @@ ESGeoNamesData::findBestMatchCityToLatitudeDegrees(float toLatitude,
     return indx;
 }
 
+// A quick test, before the expensive distance, that a city can't be within maxKm:  outside the band of latitudes
+// within maxKm, or (away from the poles) the band of longitudes
+static bool cityIsSurelyFarther(const ESCityData *city,
+                                float           toLatitude,
+                                float           toLongitude,
+                                float           maxLatDelta,
+                                float           maxLongDelta) {
+    if (fabsf(city->latitude - toLatitude) > maxLatDelta) {
+        return true;
+    }
+    float longDelta = fabsf(city->longitude - toLongitude);
+    if (longDelta > 180) {
+        longDelta = 360 - longDelta;  // across the dateline
+    }
+    return longDelta > maxLongDelta;
+}
+
+int
+ESGeoNamesData::findBestMatchCityInTZOfClosestCity(float         toLatitude,
+                                                   float         toLongitude,
+                                                   float         maxKm,
+                                                   unsigned long minPopulation,
+                                                   int           currentIndex,
+                                                   float         stickiness) {
+    ensureCityData();
+    ensureTZ();
+    const float kmPerDegree = 6371 * M_PI / 180;
+    float maxLatDelta = maxKm / kmPerDegree;
+    // A degree of longitude is shortest at the band's latitude farthest from the equator
+    float farthestLatitude = fminf(fabsf(toLatitude) + maxLatDelta, 90);
+    float maxLongDelta = farthestLatitude > 89 ? 360 : maxLatDelta / cosf(farthestLatitude * M_PI / 180);
+    const ESCityData *cities = _cityData->array();
+
+    // The closest city, which gives the time zone
+    float closestDist = maxKm;
+    int closestIndex = -1;
+    for (int i = 0; i < _numCities; i++) {
+        if (cityIsSurelyFarther(cities + i, toLatitude, toLongitude, maxLatDelta, maxLongDelta)) {
+            continue;
+        }
+        float thisDist = distanceBetweenTwoCoordinates(cities[i].latitude, cities[i].longitude, toLatitude, toLongitude);
+        if (thisDist <= closestDist) {
+            closestDist = thisDist;
+            closestIndex = i;
+        }
+    }
+    if (closestIndex < 0) {
+        return -1;
+    }
+
+    // Then the best match among nearby cities big enough in that zone.  Scoring by distance / population (rather than
+    // findBestMatchCityToLatitudeDegrees' distance / sqrt(population)) favors the big cities, which change less often.
+    const short *tzIndices = _tzIndices->array();
+    short tzIndex = tzIndices[closestIndex];
+    float bestScore = 1E20;
+    int bestIndex = closestIndex;
+    float currentScore = -1;  // the current city's score, if it still qualifies
+    for (int i = 0; i < _numCities; i++) {
+        if (tzIndices[i] != tzIndex || cities[i].population < minPopulation ||
+            cityIsSurelyFarther(cities + i, toLatitude, toLongitude, maxLatDelta, maxLongDelta)) {
+            continue;
+        }
+        float thisDist = distanceBetweenTwoCoordinates(cities[i].latitude, cities[i].longitude, toLatitude, toLongitude);
+        if (thisDist > maxKm) {
+            continue;
+        }
+        float thisScore = thisDist / fmaxf(cities[i].population, 1);
+        if (i == currentIndex) {
+            currentScore = thisScore;
+        }
+        if (thisScore < bestScore) {
+            bestScore = thisScore;
+            bestIndex = i;
+        }
+    }
+    if (currentScore >= 0 && currentScore <= bestScore * stickiness) {
+        return currentIndex;
+    }
+    return bestIndex;
+}
+
 std::string
 ESGeoNamesData::getDisplayNameAtNameIndex(int nameIndex) {
     const char *compoundName = _cityNames->array() + nameIndex;
@@ -753,6 +834,18 @@ ESGeoNames::findBestMatchCityToLatitudeDegrees(float toLatitude,
                                                float toLongitude) {
     ESAssert(sharedData);
     _selectedCityIndex = sharedData->findBestMatchCityToLatitudeDegrees(toLatitude, toLongitude);
+}
+
+bool
+ESGeoNames::findBestMatchCityInTZOfClosestCity(float         toLatitude,
+                                               float         toLongitude,
+                                               float         maxKm,
+                                               unsigned long minPopulation,
+                                               float         stickiness) {
+    ESAssert(sharedData);
+    _selectedCityIndex = sharedData->findBestMatchCityInTZOfClosestCity(toLatitude, toLongitude, maxKm, minPopulation,
+                                                                        _selectedCityIndex, stickiness);
+    return _selectedCityIndex >= 0;
 }
 
 bool

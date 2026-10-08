@@ -70,6 +70,12 @@ class ESGeoNamesData {
                                                              float longitudeDegrees);
     int                     findBestMatchCityToLatitudeDegrees(float latitudeDegrees,
                                                                float longitudeDegrees);	// factors in population, too
+    int                     findBestMatchCityInTZOfClosestCity(float         latitudeDegrees,
+                                                               float         longitudeDegrees,
+                                                               float         maxKm,
+                                                               unsigned long minPopulation,
+                                                               int           currentIndex,
+                                                               float         stickiness);  // -1 if no city is within maxKm
     int                     findBestCityForTZName(const std::string &tzName);
 
     std::string             cityNameForSelectedIndex(int indx);
@@ -151,6 +157,16 @@ class ESGeoNames {
                                                              float longitudeDegrees);
     void                    findBestMatchCityToLatitudeDegrees(float latitudeDegrees,
                                                                float longitudeDegrees);	// factors in population, too
+    // A well-known city near the given point, for naming it:  among the cities within maxKm that share the closest
+    // city's time zone (the zone findClosest would give) and have at least minPopulation, the one with the least
+    // distance / population (the closest city if none qualifies).  The city selected before stays selected unless
+    // another scores better by more than stickiness (e.g. 1.5), so a dragged point doesn't flicker between cities.
+    // Returns false, selecting no city, if the closest city is farther than maxKm.
+    bool                    findBestMatchCityInTZOfClosestCity(float         latitudeDegrees,
+                                                               float         longitudeDegrees,
+                                                               float         maxKm,
+                                                               unsigned long minPopulation = 0,
+                                                               float         stickiness = 1);
     bool                    findBestCityForTZName(const std::string tzName);
     std::string             selectedCityName();		// returns last found city
     std::string             selectedCityRegionName();	// returns last found city's region info
