@@ -236,7 +236,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 2700;
+				LastUpgradeCheck = 2710;
 			};
 			buildConfigurationList = 92C3B26B139448F300880094 /* Build configuration list for PBXProject "eslocation" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -351,6 +351,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				STRIPFLAGS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -404,6 +405,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				STRIPFLAGS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
